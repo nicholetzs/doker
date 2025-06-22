@@ -1,0 +1,66 @@
+# Projeto Web com Docker, Node.js, MongoDB e Vite + React
+
+Este projeto consiste em um sistema web containerizado com os seguintes serviços:
+
+- **Backend:** API Node.js com Express e driver oficial do MongoDB (sem Mongoose).
+- **Frontend:** Aplicação React construída com Vite.
+- **Banco de dados:** MongoDB rodando em container separado.
+- **Administração do banco:** Mongo-express para gerenciar o MongoDB.
+- **Gerenciamento de containers:** Portainer para interface gráfica de containers Docker.
+
+---
+
+## Estrutura do projeto
+
+/
+├── backend/ # Código backend Node.js
+├── docker-vite/ # Código frontend Vite + React
+├── docker-compose.yml
+
+---
+
+## Tecnologias utilizadas
+
+- Node.js 20
+- Express 4.x
+- MongoDB (driver oficial)
+- React 18
+- Vite 4
+- Docker & Docker Compose
+- Mongo-express
+- Portainer
+
+---
+
+## Como rodar o projeto
+
+1. Certifique-se de ter o Docker Desktop instalado e em execução.
+
+2. Na raiz do projeto (onde está o arquivo `docker-compose.yml`), execute:
+
+```bash
+docker compose up --build
+
+Acesse os serviços no navegador:
+
+Frontend: http://localhost:8080
+
+Backend API: http://localhost:3000
+
+Mongo-express (admin do MongoDB): http://localhost:8081
+
+Portainer (gerenciador gráfico dos containers): http://localhost:9000
+
+
+Backend
+Servidor Express escutando na porta 3000.
+
+Conecta ao MongoDB via variável de ambiente MONGO_URL.
+
+Endpoints REST para gerenciar mensagens.
+
+Frontend
+Aplicação React servida via Nginx dentro do container frontend.
+
+Comunicação com backend via API REST.
+```
