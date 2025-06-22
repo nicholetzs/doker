@@ -1,0 +1,9 @@
+# Ignorar arquivos de ambiente
+.env
+.env.*
+
+# Ignorar arquivos confidenciais do Docker
+docker-compose.override.yml
+docker-compose.secrets.yml
+docker/secrets/
+docker/.env
